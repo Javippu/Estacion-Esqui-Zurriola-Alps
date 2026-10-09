@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <header>
+        <img src="logo_estacion.png" alt="logo_estacion" width="150">
+        <h1>Estación de Esquí Zurriola Alps</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html"><strong>Inicio</strong></a></li>
+                <li><a href="Pistas.html"><strong>Estado de Pistas</strong></a></li>
+                <li><a href="Alquiler.html"><strong>Reservas</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="info-resumen">
+            <h2>Más fácil, más cómodo, ¡sube directo a pistas!</h2>
+            <div class="contenedor-ventajas">
+                <div class="ventajas">
+                    <img src="icono_movil.png" alt="Icono Reserva Movil">
+                    <p>Gana tiempo de esquí, reserva tu material desde casa y recógelo a la llegada a la estación, ¡a pie de pistas!</p>
+                </div>
+                <div class="ventajas">
+                    <img src="icono_taquillas.png" alt="Icono GuardaEsquis">
+                    <p>Contamos con Guarda-Esquís para que te olvides de subir y bajar tu material de casa.</p>
+                </div>
+                <div class="ventajas">
+                    <img src="icono_vestuario.png" alt="Icono Vestuario">
+                    <p>En la cabaña del alquiler dispones de un espacio cómodo y privado para cambiarte de ropa.</p>
+                </div>
+                <div class="ventajas">
+                    <img src="icono_secabotas.png" alt="Icono Secabotas">
+                    <p>Disponemos de servicio de secabotas para que al día siguiente las utilices como el primer día.</p>
+                </div>
+            </div>
+        </section>
+        <section class="banner-fijo">
+            <h2>«EL PICACHILLA»: COMODIDAD A PIE DE PISTA EN DONOSTIA</h2>
+            <p>Aprovecha cada minuto de nieve sin cargar con tu equipo por la ciudad. En el alquiler de «El Picachilla» dispones de equipamiento de alta gama revisado a diario, secabotas e instalaciones privadas en el corazón de la estación para equiparte rápido y lanzarte directo a disfrutar de las pistas sobre el Cantábrico.</p>
+        </section>
+        <section class="formulario">
+            <h2>Formulario de Alquiler de Material y Forfait</h2>
+            <p>Rellena tus datos para tener listo tu equipo a tu llegada a la Estación Gros.</p>
+            <form action="server.php" method="post">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <p>
+                        <label for="nombre">Nombre y Apellidos:</label>
+                        <input type="text" name="nombre" required>
+                    </p>
+                    <p>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="telefono">Teléfono de contacto:</label>
+                        <input type="tel" name="telefono">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Detalles Alquiler y Forfait</legend>
+                    <p>
+                        <span>Equipo Preferido:</span><br>
+                        <label for="esqui">
+                            <input type="radio" name="equipo" value="esqui" checked> Esquí
+                        </label>
+                        <label for="snowboard">
+                            <input type="radio" name="equipo" value="snowboard"> Snowboard
+                        </label>
+                    </p>
+                    <p>
+                        <label for="talla-botas">Talla de botas:</label>
+                        <select name="talla_botas">
+                            <option value="">-- Selecciona tu talla --</option>
+                            <option value="36-38">36 - 38</option>
+                            <option value="39-41">39 - 41</option>
+                            <option value="42-44">42 - 44</option>
+                            <option value="45-47">45 - 47</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="nivel">Nivel de experiencia:</label>
+                        <select name="nivel">
+                            <option value="principiante">Principiante</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="incluir-forfait">
+                            <input type="checkbox" name="incluir_forfait" value="si"> Incluir Forfait de acceso a pistas
+                        </label>
+                    </p>
+                    <p>
+                        <label for="observaciones">Observaciones o peticiones especiales:</label><br>
+                        <textarea id="observaciones" rows="4" cols="40"></textarea>
+                    </p>
+                </fieldset>
+                <p>
+                    <label for="privacidad">
+                        <input type="checkbox" name="privacidad" required> Acepto la política de privacidad y condiciones
+                    </label>
+                </p>
+                <p>
+                    <input type="submit" value="Confirmar Reserva">
+                    <input type="reset" value="Limpiar Formulario">
+                </p> 
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-texto">
+            <p>&copy; 2026 Estacion Gros. Todos los derechos reservados.</p>
+            <p>Contacto: info@estaciongros.com</p>
+        </div>
+        <div class="footer-foto">
+            <img src="foto_footer.png" alt="Logotipo secundario Estacion Gros" width="100">
+        </div>
+        <div class="footer-redes">
+            <p>Síguenos en:</p>
+            <a href="https://instagram.com/estaciongros" target="_blank">
+                <img src="icono_instagram.png" alt="Síguenos en Instagram" width="30">
+            </a>
+            <a href="https://twitter.com/estaciongros" target="_blank">
+                <img src="icono_x.png" alt="Síguenos en Twitter" width="30">
+            </a>
+            <a href="https://facebook.com/estaciongros" target="_blank">
+                <img src="icono_facebook.png" alt="Síguenos en Facebook" width="30">
+            </a>
+            <a href="https://tiktok.com/estaciongros" target="_blank">
+                <img src="icono_tiktok.png" alt="Síguenos en TikTok" width="30">
+            </a>
+        </div>   
+    </footer>
+</body>
+</html>
